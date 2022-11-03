@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 
 import delay from '../utils/delay.js';
