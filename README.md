@@ -21,8 +21,8 @@ Para utilizar o pacote é necessário informar dados do agendamento que será ex
     "name": Nome do Agendamento.
     "product": Nome do Produto que contém os Módulos a serem executados.
     "url": URL do Agendamento.   
-```
-    **Ao menos um dos arrays abaixo precisa conter informação**
+``` 
+**Ao menos um dos arrays abaixo precisa conter informação**
 ```
     "identifiers": Array com identificadores dos Casos de Teste.
     "modules": Array com módulos a serem executados.
@@ -40,10 +40,10 @@ Para utilizar o pacote é necessário informar dados do agendamento que será ex
         "qualityGates": Array dos Padrões de Qualidade a serem executados. Esse parâmetro é opcional, podendo ser utilizado no lugar do array modules para executar todos os testes dentro dos padrões de qualidade informados.
         "browsers": Array com os browsers onde os testes devem ser executados, caso não seja informado o teste será executado no Google Chrome.
         "identifiers": identificadores do caso de teste
-        Scheduled: horário de execução do agendamento 
-        Mobile: Array de objetos com informações dos dispositivos que será executado
-        EmailNotifications:   Array de objetos com lista dos  emails que devem receber notificação e frequência(sempre ou apenas nas falhas) * será permitido apenas emails cadastrados no sistema *
-        SlackNotifications: Array de objetos com lista dos canais que devem receber notificação e frequência(sempre ou apenas nas falhas) * será  permitido apenas canais cadastrados no sistema *
-        TeamsNotifications: Array de objetos com lista dos ids dos canais que devem receber notificação e frequência(sempre ou apenas nas falhas) * será  permitido apenas id de canais cadastrados no sistema *
+        "Scheduled": horário de execução do agendamento 
+        "Mobile": Array de objetos com informações dos dispositivos que será executado
+        "EmailNotifications":   Array de objetos com lista dos  emails que devem receber notificação e frequência(sempre ou apenas nas falhas) * será permitido apenas emails cadastrados no sistema *
+        "SlackNotifications": Array de objetos com lista dos canais que devem receber notificação e frequência(sempre ou apenas nas falhas) * será  permitido apenas canais cadastrados no sistema *
+        "TeamsNotifications": Array de objetos com lista dos ids dos canais que devem receber notificação e frequência(sempre ou apenas nas falhas) * será  permitido apenas id de canais cadastrados no sistema *
     }
 ```
