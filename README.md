@@ -46,4 +46,4 @@ Para utilizar o pacote é necessário informar dados do agendamento que será ex
         "TeamsNotifications": Array de objetos com lista dos ids dos canais que devem receber notificação e frequência(sempre ou apenas nas falhas).
     }
 ```
-**Obs.: Para notificações, somente são permitidos canais e e-mails cadastrados no sistema**
+**Obs.: Para notificações, somente são permitidos canais e e-mails cadastrados no sistema.**
