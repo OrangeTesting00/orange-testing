@@ -46,6 +46,8 @@ async function main(params) {
     return;
   }
 
+  console.log(`1/4 - ${loginUser.message}`);
+
   const postScheduleResponse = await postSchedule(loginUser.token, params.scheduleBody, params.instance);
   if (!postScheduleResponse.ok) {
     console.log(postScheduleResponse.message);
@@ -73,6 +75,13 @@ async function main(params) {
     } else {
       console.log("3/4 - Agendamento em execução...")
     }
+  }
+
+  if (getScheduleResultCurrent.result !== 'Pass') {
+    console.log("4/4 - Agendamento concluído com falha. \n", JSON.stringify(getScheduleResultCurrent));
+    process.exitCode = 1;
+
+    return;
   }
 
   console.log("4/4 - Agendamento concluído com sucesso. \n", JSON.stringify(getScheduleResultCurrent));

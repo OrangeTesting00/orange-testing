@@ -29,10 +29,8 @@ async function generateToken(instance, body) {
         if (response.ok) {
           const { token } = await response.json();
 
-          result.message = "1/4 - Login efetuado com sucesso.";
+          result.message = "Login efetuado com sucesso.";
           result.token = token;
-
-          console.log(result.message);
         }
 
         if (response.status === 401) {

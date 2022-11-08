@@ -41,7 +41,7 @@ Para utilizar o pacote é necessário informar dados do agendamento que será ex
         "identifiers": identificadores do caso de teste.
         "Scheduled": horário de execução do agendamento.
         "Mobile": Array de objetos com informações dos dispositivos que será executado.
-        "EmailNotifications":   Array de objetos com lista dos  emails que devem receber notificação e frequência(sempre ou apenas nas falhas).
+        "EmailNotifications": Array de objetos com lista dos  emails que devem receber notificação e frequência(sempre ou apenas nas falhas).
         "SlackNotifications": Array de objetos com lista dos canais que devem receber notificação e frequência(sempre ou apenas nas falhas).
         "TeamsNotifications": Array de objetos com lista dos ids dos canais que devem receber notificação e frequência(sempre ou apenas nas falhas).
     }
