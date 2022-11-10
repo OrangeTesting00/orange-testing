@@ -92,7 +92,10 @@ async function main(params) {
     return;
   }
 
-  console.log("4/4 - Agendamento concluído com sucesso. \n", JSON.stringify(getScheduleResultCurrent));
+  console.log("4/4 - Agendamento concluído com sucesso.");
+  console.log(`Link para o relatório consolidado: \
+https://${params.instance}.orangetesting.com/schedules/${getScheduleResultCurrent.idSchedule}/consolidated`);
+
   process.exitCode = 0;
 
   return;
