@@ -1,6 +1,6 @@
 {
   "name": "orangetesting",
-  "version": "1.0.11",
+  "version": "1.1.2",
   "description": "Esse pacote faz o login na plataforma Orange Testing usando as credenciais de um usuário e cria um novo agendamento utilizando informações fornecidas em um arquivo JSON.",
   "main": "index.js",
   "type": "module",

@@ -1,15 +1,15 @@
 import fetchCommon from "../utils/fetchCommon.js";
 
 async function generateToken(instance, body) {
-  const bodyIsEmpty = body ? Object.keys(body).length === 0 : true;
+  const noLoginData = body ? Object.keys(body).length === 0 : true;
 
   try {
     if (!instance) {
       throw new Error('Instância não informada.')
     }
 
-    if (!body || bodyIsEmpty || !body.username || !body.password) {
-      throw new Error('Falha ao efetuar o login. Dados incompletos no objeto "login".');
+    if (!body || noLoginData || !body.username || !body.password) {
+      throw new Error('Falha ao efetuar o login. Dados de login incompletos.');
     }
 
     const requestData = {
