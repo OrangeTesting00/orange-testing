@@ -8,6 +8,8 @@ import getScheduleResult from './getScheduleResult.js';
 import postSchedule from './postSchedule.js';
 
 const path = process.argv[2];
+const username = process.argv[3];
+const password = process.argv[4];
 
 async function getParamsFromFile(filePath) {
   const encoding = 'utf-8';
@@ -38,7 +40,13 @@ async function getParamsFromFile(filePath) {
 }
 
 async function main(params) {
-  const loginUser = await generateToken(params.instance, params.login);
+  const loginObj = {
+    username,
+    password
+  };
+
+  const loginUser = await generateToken(params.instance, loginObj);
+
   if (!loginUser.ok) {
     console.log(loginUser.message);
     process.exitCode = 1;
@@ -84,7 +92,10 @@ async function main(params) {
     return;
   }
 
-  console.log("4/4 - Agendamento concluído com sucesso. \n", JSON.stringify(getScheduleResultCurrent));
+  console.log("4/4 - Agendamento concluído com sucesso.");
+  console.log(`Link para o relatório consolidado: \
+https://${params.instance}.orangetesting.com/schedules/${getScheduleResultCurrent.idSchedule}/consolidated`);
+
   process.exitCode = 0;
 
   return;

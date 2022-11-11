@@ -16,9 +16,10 @@ async function getScheduleResult(token, idSchedule, instance) {
       };
 
       if (response.ok) {
-        const { start, end, result, ...rest } = await response.json();
+        const { start, end, result, idSchedule, ...rest } = await response.json();
 
         resultResponse.result = result;
+        resultResponse.idSchedule = idSchedule;
         resultResponse.rest = rest;
 
         if (result !== "Pending" && result !== "Running") {
