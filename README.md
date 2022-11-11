@@ -27,9 +27,7 @@
   </a>
 </p>
 
-<h2 align="center">Orange Testing CLI</h2>
-
-# Como configurar os agendamentos na Pipeline (CI/CD)
+# Orange Testing CLI
 
 ## Requisitos para utilização da biblioteca:
 - Node.js - versão 14.19.0 ou superior;
@@ -56,13 +54,25 @@ npm install orangetesting -D
 }
 ```
 
-#### 3. No arquivo "package.json", crie um script que executa o comando "orangetesting" e informe o caminho relativo do arquivo de configuração criado na etapa anterior, usuário e senha:
+#### 3. No arquivo "package.json", crie um script que executa o comando "orangetesting", forneça algum dado de autenticação (token de acesso ou usuário e senha) e, opcionalmente, o caminho para o arquivo de configuração do agendamento (por padrão, o pacote buscará pelo arquivo "ot-config.json" na raiz do projeto):
 ```
 "scripts": {
-	"schedule": "orangetesting ./arquivos/config.json usuario senha"
+	"schedule": "orangetesting --path ./arquivos/config.json --username usuario --password senha"
 },
 ```
 ##### Obs.: É recomendável a utilização de variáveis de ambiente para não expor suas credenciais.
+
+<br />
+
+## Argumentos disponíveis na CLI
+```
+--help  Manual de uso da linha de comando
+--token, --t  Token de autenticação (login)
+--username, --usr  Usuário para login
+--password, --ps  Senha para login
+--path, --p  Caminho do arquivo de configuração (caminho padrão = ./ot-config.json)
+--url  URL onde o agendamento será executado
+```
 
 <br />
 
@@ -82,7 +92,7 @@ npm install orangetesting -D
 {
   "name": Nome do Agendamento.
   "product": Nome do Produto que contém os Módulos a serem executados.
-  "url": URL do Agendamento (também pode ser informado via linha de comando).
+  "url": URL do Agendamento.
 ```
 **Ao menos um dos arrays abaixo precisa conter informação**
 ```
