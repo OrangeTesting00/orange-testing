@@ -30,7 +30,7 @@ const cliHelpText = `
     Para realizar a autenticação do usuário, apenas é necessário informar o token ou os dados de acesso.
     Caso todos os possíveis dados de autenticação sejam informados, usuário e senha serão ignorados.
 
-    Se a URL não for informada, será utilizada a URL no arquivo de configuração.
+    Se a URL não for informada, será utilizada a URL no arquivo de configuração. Caso contrário, será utilizada a URL informada na linha de comando.
 `;
 
 const cliOptions = {

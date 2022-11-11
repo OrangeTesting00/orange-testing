@@ -57,7 +57,7 @@ npm install orangetesting -D
 #### 3. No arquivo "package.json", crie um script que executa o comando "orangetesting", forneça algum dado de autenticação (token de acesso ou usuário e senha) e, opcionalmente, o caminho para o arquivo de configuração do agendamento (por padrão, o pacote buscará pelo arquivo "ot-config.json" na raiz do projeto):
 ```
 "scripts": {
-	"schedule": "orangetesting --path ./arquivos/config.json --username usuario --password senha"
+  "schedule": "orangetesting --path ./arquivos/config.json --username usuario --password senha"
 },
 ```
 ##### Obs.: É recomendável a utilização de variáveis de ambiente para não expor suas credenciais.
@@ -92,7 +92,7 @@ npm install orangetesting -D
 {
   "name": Nome do Agendamento.
   "product": Nome do Produto que contém os Módulos a serem executados.
-  "url": URL do Agendamento.
+  "url": URL do Agendamento (também pode ser informado via linha de comando). 
 ```
 **Ao menos um dos arrays abaixo precisa conter informação**
 ```
@@ -119,4 +119,6 @@ npm install orangetesting -D
 }
 ```
 
-**Obs.: Para notificações, somente são permitidos canais e e-mails cadastrados no sistema.**
+## Observações: 
+- Para notificações, somente são permitidos canais e e-mails cadastrados no sistema;
+- Parâmetros informados via linha de comando serão priorizados sobre os parâmetros informados no arquivo de configuração.
