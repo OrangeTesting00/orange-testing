@@ -1,3 +1,34 @@
+<p align="center">
+  <a href="https://orangetesting.com" target="_blank">
+    <img alt="Orange Testing Logo" width="100" src="https://i0.wp.com/orangetesting.com/wp-content/uploads/2022/10/Robo-tablet.png?w=260&ssl=1">
+  </a>
+</p>
+
+<p align="center">
+  <!--a href="https://github.com/OrangeTesting00/orange-testing/actions?query=workflow%3ACI">
+    <img src="https://github.com/OrangeTesting00/orange-testing/workflows/CI/badge.svg?branch=master&event=push" alt="CI badge">
+  </a-->
+  <a href="https://codecov.io/gh/orangetesting/orangetesting">
+    <img src="https://img.shields.io/codecov/c/github/orange-testing/orange-testing.svg" alt="Coverage">
+  </a>
+  <a href="https://www.npmjs.com/package/orangetesting">
+    <img src="https://img.shields.io/npm/dt/orangetesting.svg" alt="Downloads">
+  </a>
+  <a href="https://www.npmjs.com/package/orangetesting">
+    <img src="https://img.shields.io/npm/dm/orangetesting.svg" alt="Downloads">
+  </a>
+</p>
+<p align="center">
+  <a href="https://github.com/OrangeTesting00/orange-testing/blob/master/LICENSE.md">
+    <img src="https://img.shields.io/npm/l/orangetesting.svg" alt="License">
+  </a>
+  <a href="https://www.npmjs.com/package/orangetesting">
+    <img src="https://img.shields.io/npm/v/orangetesting.svg" alt="Version">
+  </a>
+</p>
+
+<h2 align="center">Orange Testing CLI</h2>
+
 # Como configurar os agendamentos na Pipeline (CI/CD)
 
 ## Requisitos para utilização da biblioteca:
