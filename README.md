@@ -51,7 +51,7 @@ npm install orangetesting -D
 {
   "name": Nome do Agendamento.
   "product": Nome do Produto que contém os Módulos a serem executados.
-  "url": URL do Agendamento.
+  "url": URL do Agendamento (também pode ser informado via linha de comando).
 ```
 **Ao menos um dos arrays abaixo precisa conter informação**
 ```

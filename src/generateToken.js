@@ -1,9 +1,13 @@
 import fetchCommon from "../utils/fetchCommon.js";
 
-async function generateToken(instance, body) {
+async function generateToken(instance, body, token = "") {
   const noLoginData = body ? Object.keys(body).length === 0 : true;
 
   try {
+    if (token !== "") {
+      return { ok: true, token };
+    }
+
     if (!instance) {
       throw new Error('Instância não informada.')
     }

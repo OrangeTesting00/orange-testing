@@ -1,6 +1,6 @@
 import fetchCommon, { parseToken } from "../utils/fetchCommon.js";
 
-async function postSchedule(token, body, instance) {
+async function postSchedule(token, body, instance, url = "") {
   const bodyIsEmpty = body ? Object.keys(body).length === 0 : true;
 
   try {
@@ -10,6 +10,10 @@ async function postSchedule(token, body, instance) {
 
     if (!body || bodyIsEmpty) {
       throw new Error('Falha ao efetuar agendamento. Confira os dados da propriedade "scheduleBody" e tente novamente.');
+    }
+
+    if (url !== "") {
+      body.url = url;
     }
 
     const requestData = {
@@ -37,6 +41,10 @@ async function postSchedule(token, body, instance) {
 
         if (response.status === 400) {
           result.message = 'Falha ao efetuar agendamento. Confira os dados da propriedade "scheduleBody" e tente novamente.';
+        }
+
+        if (response.status === 401) {
+          result.message = 'Falha ao efetuar agendamento. O token fornecido não é válido.';
         }
 
         return result;
