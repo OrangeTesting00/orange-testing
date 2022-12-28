@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://orangetesting.com" target="_blank">
-    <img alt="Orange Testing Logo" width="100" src="https://i0.wp.com/orangetesting.com/wp-content/uploads/2022/10/Robo-tablet.png?w=260&ssl=1">
+    <img alt="Orange Testing Logo" width="100" src="https://orange-dev-public.s3.amazonaws.com/Tampa-olho0.png">
   </a>
 </p>
 
